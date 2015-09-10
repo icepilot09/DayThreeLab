@@ -5,11 +5,18 @@
 			document.addEventListener("DOMContentLoaded", go);
 			
 			function go (){
-			var btn = document.createElement("BUTTON");        
-			var t = document.createTextNode("Add Node");     
-			btn.appendChild(t);                               
-			document.body.appendChild(btn);  
+				var btn = document.createElement("BUTTON");        
+				var t = document.createTextNode("Add Node");     
+				btn.appendChild(t);                               
+				document.body.appendChild(btn); 
+			 
 			}      
+			function addSquare() {
+   		    	var div = document.createElement('div');
+				div.className = "square";
+				div.innerHTML = "";
+			}	
+
 			
 		</script>
 	</head>
