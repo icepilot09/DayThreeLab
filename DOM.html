@@ -1,6 +1,7 @@
-<html>
+
 	<head>
 		<link rel="stylesheet" href="styles.css">
+	</head>
 		<script>
 			document.addEventListener("DOMContentLoaded", go);
 			
@@ -20,6 +21,7 @@
 				square.id = document.getElementsByClassName('square').length;
 				square.addEventListener("mouseover", numbers);
 				square.addEventListener("mouseout", numberdisappear);
+				square.addEventListener("click", getRandomColor);
 				document.body.appendChild(p);
 				document.body.appendChild(square);
 				
@@ -38,9 +40,12 @@
 				
 			}
 			
+			 function getRandomColor(e) {
+       			e.target.style.backgroundColor = Math.floor(Math.random()*16777216).toString(16);
+       		}
+
+			
 		</script>
-	</head>
 	<body>
 		<!-- DO NOT ADD HTML HERE -->
 	</body>
-</html>
