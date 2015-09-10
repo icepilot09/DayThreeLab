@@ -6,18 +6,37 @@
 			
 			function go (){
 				var btn = document.createElement("BUTTON");        
-				var t = document.createTextNode("Add Node");     
-				btn.appendChild(t);                               
+				var t = document.createTextNode("Add Node");  
+				btn.appendChild(t);                          
 				document.body.appendChild(btn); 
 				btn.addEventListener('click', addSquare);
-			 
-			}      
-			function addSquare() {
-   		    	var div = document.createElement('div');
-				div.className = "square";
-				document.body.appendChild(div);
-			}	
 
+			}      
+			
+			function addSquare() {
+   		    	var square = document.createElement('div');
+				var p = document.createElement('p');
+				square.className = 'square';
+				square.id = document.getElementsByClassName('square').length;
+				square.addEventListener("mouseover", numbers);
+				square.addEventListener("mouseout", numberdisappear);
+				document.body.appendChild(p);
+				document.body.appendChild(square);
+				
+			}	
+			
+			function numbers(e) {
+				var square = e.target;
+				var t = document.createTextNode(square.id);
+				square.appendChild(t);
+				
+			}
+			
+			function numberdisappear(e) {
+				var square = e.target;
+				square.firstChild.remove();
+				
+			}
 			
 		</script>
 	</head>
