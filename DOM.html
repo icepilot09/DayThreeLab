@@ -9,12 +9,13 @@
 				var t = document.createTextNode("Add Node");     
 				btn.appendChild(t);                               
 				document.body.appendChild(btn); 
+				btn.addEventListener('click', addSquare);
 			 
 			}      
 			function addSquare() {
    		    	var div = document.createElement('div');
 				div.className = "square";
-				div.innerHTML = "";
+				document.body.appendChild(div);
 			}	
 
 			
