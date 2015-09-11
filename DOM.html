@@ -1,5 +1,4 @@
-
-	<head>
+<head>
 		<link rel="stylesheet" href="styles.css">
 	</head>
 		<script>
@@ -11,7 +10,6 @@
 				btn.appendChild(t);                          
 				document.body.appendChild(btn); 
 				btn.addEventListener('click', addSquare);
-
 			}      
 			
 			function addSquare() {
@@ -43,9 +41,25 @@
 			 function getRandomColor(e) {
        			e.target.style.backgroundColor = Math.floor(Math.random()*16777216).toString(16);
        		}
-
+			   
 			
 		</script>
 	<body>
 		<!-- DO NOT ADD HTML HERE -->
+		<!-- 	square.addEventListener("dblclick", clickremove);		 
+			
+			function clickremove(e) {
+				 var squareIDNum = parseInt(e.target.id);
+				 if (squareIDNum %2 === 0) {
+				 	if (e.target.previousSibling === null) {
+						 alert("Nuh uh uh");
+					 }
+				 	else {
+						 e.target.previousSibling.remove();
+					 }
+			 }   
+			   
+			   	 else if (e.target.nextSibling === null) {
+						alert("Not gonna do it");
+					} -->
 	</body>
